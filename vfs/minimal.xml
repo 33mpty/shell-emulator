@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Заготовка VFS. Загрузка реализуется на этапе 3. -->
+<vfs name="minimal">
+  <folder name="home">
+    <file name="readme.txt">Привет из VFS.</file>
+  </folder>
+</vfs>
