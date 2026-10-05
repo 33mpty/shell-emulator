@@ -6,8 +6,6 @@ from emulator.config import parse_args, print_debug
 from emulator.script_runner import ScriptError, run_script
 from emulator.shell import Shell
 
-ERROR_EXIT_CODE = 1
-
 
 def run_startup_script(shell, path):
     """Выполнить стартовый скрипт. Вернуть False, если был exit."""
