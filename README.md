@@ -88,6 +88,20 @@ make run                                   # то же, что ./run.sh
 make test                                  # запуск тестов
 ```
 
+## Запуск в Windows
+
+```bat
+run.bat                                    :: интерактивный режим
+run.bat --vfs vfs\minimal.xml              :: с указанием VFS
+run.bat --script startup\basic.txt         :: со стартовым скриптом
+python -m pytest tests                     :: тесты (нужен pytest)
+```
+
+Скрипт `run.bat` сам подставляет `PYTHONPATH=src` и вызывает
+`python -m emulator`. Скрипты из папки `scripts` написаны для sh и
+запускаются в Git Bash, который устанавливается вместе с Git for
+Windows.
+
 ## Скрипты тестирования параметров
 
 Скрипты реальной ОС, каждый проверяет свою комбинацию параметров:
