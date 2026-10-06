@@ -37,7 +37,7 @@ def test_comments_and_blank_lines_ignored(tmp_path, capsys):
 def test_exit_stops_script(tmp_path, capsys):
     path = write_script(tmp_path, "ls\nexit\nls\n")
     assert run_script(Shell("vfs"), path) is False
-    assert capsys.readouterr().out.count("vfs>") == 2
+    assert capsys.readouterr().out == "vfs> ls\nls\nvfs> exit\n"
 
 
 def test_missing_file(tmp_path):
